@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Corrida pelas Esmeraldas do Caos - Sonic Adventure</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Vídeo de Background -->
+    <video id="background-video" autoplay loop muted playsinline>
+      <source src="assets/background.mp4" type="video/mp4" />
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+    <!-- Controles de Áudio -->
+    <div class="audio-controls">
+      <button id="play-audio" class="audio-btn" title="Tocar música">🎵</button>
+      <button id="pause-audio" class="audio-btn" title="Pausar música">⏸️</button>
+    </div>
+
+    <!-- Container Principal do Desafio -->
+    <div class="container">
+      <h1 class="title">⚡ A Corrida pelas Esmeraldas do Caos</h1>
+      <p class="subtitle">Ajude Sonic a encontrar as Esmeraldas através de coordenadas primas!</p>
+
+      <!-- Input de Entrada -->
+      <div class="input-section">
+        <label for="coordinates-input">📍 Insira as coordenadas (ex: [(1, 2), (3, 5), (4, 6)]):</label>
+        <input type="text" id="coordinates-input" placeholder="[(1, 2), (3, 5), (4, 6), (5, 7)]" />
+      </div>
+
+      <!-- Área dos Botões -->
+      <div class="buttons-area">
+        <button class="action-btn calculate-btn" style="--clr: #00d4ff" id="calculate-btn">
+          <span>CALCULAR</span>
+          <i></i>
+        </button>
+        <button class="action-btn back-btn" style="--clr: #ff3d00" id="back-btn">
+          <span>VOLTAR</span>
+          <i></i>
+        </button>
+      </div>
+
+      <!-- Seção de Resultado -->
+      <div class="result-section" id="result-section">
+        <h2 class="result-title">💎 Resultado da Busca</h2>
+        <div class="result-content" id="result-content">
+          <!-- O resultado será inserido aqui via JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Áudio de Fundo (ADICIONE SEU ARQUIVO sonic-theme.mp3 NA PASTA assets) -->
+    <audio id="background-audio" loop>
+      <source src="assets/theme.mp3" type="audio/mpeg" />
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
